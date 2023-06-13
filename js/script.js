@@ -82,4 +82,6 @@ function atualizaEstatisticas2 (peca) {
 
 function trocaImagem(cor){
     document.querySelector(".robo").src="img/Robotron 2000 - " + cor + ".png";
+
+    // conhecimento novo, ao inserir .src vc consegue alterar o src da classe inserida ".robo"
  }
