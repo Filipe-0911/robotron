@@ -1,16 +1,23 @@
-const robotron =  document.querySelector("#robotron");
-let nome = prompt("Diga seu nome");
+const controle = document.querySelectorAll(`[data-controle]`);
 
-robotron.addEventListener("click", (evento) => {
-    console.log(nome + ", você clicou no robô");
-    console.log(evento);
-    
-}) 
+controle.forEach( (elemento) => {      //forEach interage com cada elemento do array obtido atraves do querySelectorAll
+    elemento.addEventListener(`click`, (evento) => {
+        manipulaDados(evento.target.dataset.controle, evento.target.parentNode); 
+        
+    })
+})
 
-function dizOi () {
+function manipulaDados(operacao, controle) {
 
-    console.log('Olá, ' + nome + '. Seja bem vindo ao Robotron 2000');
-    alert("Clique no robô e obtenha mais informações no console.")
+    console.log(operacao);
+
+    console.log(controle);
+
+    const peca = controle.querySelector("[data-contador]");
+
+    if(operacao === "-") {
+        peca.value = parseInt(peca.value) - 1
+    } else {
+        peca.value = parseInt(peca.value) + 1 //parseInt transforma em number
+    }
 }
-
-dizOi ()
