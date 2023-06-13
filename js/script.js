@@ -36,7 +36,7 @@ const pecas = {
     }
 }
 
-controle.forEach( (elemento) => {      //forEach interage com cada elemento do array obtido atraves do querySelectorAll
+controle.forEach( (elemento) => {
     elemento.addEventListener(`click`, (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode); 
         
@@ -51,17 +51,12 @@ controle.forEach( (elemento) => {      //forEach interage com cada elemento do a
 
 function manipulaDados(operacao, controle) {
 
-    //console.log(operacao);
-
-    //console.log(controle);
-
     const peca = controle.querySelector("[data-contador]");
-    //console.log(peca.value)
-
+    
     if(operacao === "-") {
         peca.value = parseInt(peca.value) - 1
     } else {
-        peca.value = parseInt(peca.value) + 1 //parseInt transforma em number
+        peca.value = parseInt(peca.value) + 1
        
     }
 }
