@@ -33,8 +33,10 @@ main {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
+    height: 80vh;
     flex-basis: 40%;
     position: relative;
+    
 }
 
 .robo {
@@ -207,6 +209,20 @@ main {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
+}
+.alterar {
+    margin: 2px;
+    width: 200px;
+    
+}
+
+.botoes {
+   position: relative;
+   right: 5%;
+   bottom: 10%;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
 }
 
 @media screen and (max-width: 1600px) {
